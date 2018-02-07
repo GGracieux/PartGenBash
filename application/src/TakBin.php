@@ -62,7 +62,7 @@ class TakBin extends BatchAbstract{
 	{
 		// Verification dossier
 		$this->checkDirExists($dir);
-		
+
 		// Initialise le dossier
 		$this->resetTmpOutput($dir);
 		$this->resetExpectedOutput($dir);
@@ -71,12 +71,12 @@ class TakBin extends BatchAbstract{
 		$this->importTemplate($dir);		
 		$this->overloadTemplate($dir);
 		$this->replaceVariables($dir);
-		
+
 		// Traitement des fichiers générés via lilypond
 		$this->lilyPond($dir);
 		$this->fluidSynth($dir);
 		$this->lame($dir);
-		
+
 		//Nettoyage
 		$this->resetTmpOutput($dir);
 		$this->dispatchOutput($dir);

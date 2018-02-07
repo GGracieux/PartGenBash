@@ -5,6 +5,7 @@ class LilyGen extends BatchAbstract{
 	// armure par défaut
 	private $currKey = 'mibM';
 
+	// tableau de correspondance des notes
 	private $notesConv;
 
 	// Nom du fichier de log
@@ -12,7 +13,6 @@ class LilyGen extends BatchAbstract{
 
 	// Action du batch
 	protected $batchAction = 'Convertion';
-
 
 	public function __construct($argv) {
 
